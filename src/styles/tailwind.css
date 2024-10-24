@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
+@layer base {
+}
 
+:root {
+  /* Farver */
+
+  --cerise-red: #ff1054;
+  --pine-green: #007c79;
+  --wood-smoke-950: #1a1a1a;
+  --hvid: #ffeff1;
+
+  /* Font */
 }
