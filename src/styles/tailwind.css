@@ -12,10 +12,9 @@
   --pine-green: #007c79;
   --wood-smoke-950: #1a1a1a;
   --hvid: #ffeff1;
-
-  /* Font */
 }
 
+/* Font */
 @font-face {
   font-family: "oliver";
   src: url("/font/oliver-regular-webfont.woff2") format("woff2");
@@ -48,5 +47,5 @@
   font-family: "tiempos-italic";
   src: url("/font/test-tiempos-text-medium-italic.woff2") format("woff2");
   font-weight: normal;
-  font-style: normal;
+  font-style: italic;
 }
