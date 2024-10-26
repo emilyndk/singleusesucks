@@ -14,13 +14,11 @@ export default {
       colors: {
         /* Farver - skriv disse værdier: hvid, sort osv., når de skal bruges i HTML*/
         hvid: "var(--vista-white-50)",
-        sort: "var(--wood-smoke-950)",
-        // ER IKKE DONE ENDNU!!!
-        // --cerise-red-600: #ff1054;
-        // --pine-green-700: #007c79;
-        // --pine-green-800: #066968;
-        // --wood-smoke-700: #4f4f4f;
-        // --wood-smoke-950: #1a1a1a;
+        pink: "var(--cerise-red-600)",
+        turq700: "var(--pine-green-700)",
+        turq800: "var(--pine-green-800)",
+        sort700: "var(--wood-smoke-700)",
+        sort950: "var(--wood-smoke-950)",
       },
     },
   },
