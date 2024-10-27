@@ -3,19 +3,18 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Farver */
+    --vista-white-50: #ffeff1;
+    --cerise-red-600: #ff1054;
+    --pine-green-700: #007c79;
+    --pine-green-800: #066968;
+    --wood-smoke-700: #4f4f4f;
+    --wood-smoke-950: #1a1a1a;
+  }
 }
 
-:root {
-  /* Farver */
-
-  --cerise-red: #ff1054;
-  --pine-green: #007c79;
-  --wood-smoke-950: #1a1a1a;
-  --hvid: #ffeff1;
-
-  /* Font */
-}
-
+/* Font */
 @font-face {
   font-family: "oliver";
   src: url("/font/oliver-regular-webfont.woff2") format("woff2");
@@ -48,5 +47,5 @@
   font-family: "tiempos-italic";
   src: url("/font/test-tiempos-text-medium-italic.woff2") format("woff2");
   font-weight: normal;
-  font-style: normal;
+  font-style: italic;
 }

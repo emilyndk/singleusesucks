@@ -1,15 +1,54 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
+import Hero from "../components/Hero.astro";
+import Plastikforurening from "../components/Plastikforurening.astro";
+import Problemet from "../components/Problemet.astro";
+import HvadKanDuGre from "../components/HvadKanDuGøre.astro";
+import HvadViGr from "../components/HvadViGør.astro";
+import Form from "../components/Form.astro";
+import Merch from "../components/Merch.astro";
+import Nyhedsbrev from "../components/Nyhedsbrev.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
 import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+
+const schemamarkup = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://singleusesucks-t12.netlify.app/"
+  },
+  "headline": "#SINGLEUSESUCKS",
+  "description": "Plastikforurening påvirker miljøet og dyrelivet negativt, især gennem engangsplastik og mikroplast i fødevarer og luft. Plastic Change mobiliserer samfundet, uddanner unge og presser på for bedre lovgivning i Danmark og globalt. Med initiativer som Plastic Changer-universet inspirerer de til handling, og deres merchandise donerer 5% af omsætningen til havbeskyttelse. Din indsats tæller – vælg genanvendelige alternativer, reducer engangsplastik og støt en cirkulær økonomi for at skabe en bæredygtig fremtid.",  
+  "author": {
+    "@type": "Organization",
+    "name": "Plastic Change",
+    "url": "https://plasticchange.dk/"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kea-Students-Team12-2024"
+  },
+  "datePublished": "2024-11-01",
+  "dateModified": "2024-10-25"
+}
 ---
-<MainLayout title="Titel">
+<MainLayout title="#SingleUseSucks"
+description="Giver miljøvenlige tips og arbejder for mindre plastikforurening. Bidrag og hjælp havet!"
+ogtitle="Plastic Change: Bekæmp Plastikforurening" 
+ogdescription="Deltag i kampen mod plastikforurening! Få indsigt i bæredygtige løsninger, bidrag til havbeskyttelse, og lær hvordan du kan reducere dit plastforbrug." >
 	<article>
-		<h1 class="font-[tiempos-italic]">Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
+		<h1 class="font-[campton-sb]">Knappernes standard setting og links - ændre i dem hvis det er...</h1>
+    <Button variant="primary" size="small">Se mere!</Button>
+     <Button variant="primary" size="medium">Se mere!</Button>
+      <Button variant="primary" size="large">Se mere!</Button>
+		<!-- <Image src={} alt=""></Image> -->
+     <div class="bg-sort950">
+     <p><Link href="https://www.kea.dk" target="_blank" variant="textlink" size="small">En anden side</Link></p>
+     <p><Link href="https://www.kea.dk" target="_blank" variant="menu" size="medium">en anden side</Link></p>
+     <p><Link href="https://www.kea.dk" target="_blank" variant="footer" size="large">En anden side</Link></p>
+    </div>
 	</article>
 </MainLayout>
+<script type="application/ld+json" set:html={JSON.stringify(schemamarkup)} />
