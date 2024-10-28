@@ -12,8 +12,16 @@ import monkey from "../assets/images/monkey.png";
 ---
 
 
-<section class="h-screen bg-sort950" >
-    <Image src={logo} alt=""/>
-    <p class="font-[oliver] text-hvid text-lg">Vores verden kan ikke holde til mere unødvendig plastik.</p>
-    <h1 class="font-[campton-xb] text-pink text-9xl">#SINGLEUSESUCKS</h1>
+<section class="h-lvh lg:h-screen bg-sort950">
+    <div class="grid grid-rows-2">
+        <div class="flex justify-center">
+        <Image src={logo} alt="Plastic Change logo" loading="lazy"/>
+        </div>
+        <div class="flex justify-center">
+            <div class="grid grid-rows-[1fr_4fr] gap-0">
+                <p class="font-[oliver] text-hvid text-sm lg:text-lg object-left">Vores verden kan ikke holde til mere unødvendig plastik.</p>
+                <h1 class="font-[campton-xb] text-pink text-[45px] lg:text-9xl">#SINGLEUSESUCKS</h1>
+            </div>
+        </div>
+    </div>
 </section>
