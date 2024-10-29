@@ -12,6 +12,8 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from 'astro:assets';
 
+import 'animate.css';
+
 const schemamarkup = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -34,7 +36,7 @@ const schemamarkup = {
   "dateModified": "2024-10-25"
 }
 ---
-<MainLayout title="#SingleUseSucks"
+<MainLayout class="scroll-smooth" title="#SingleUseSucks"
 description="Giver miljøvenlige tips og arbejder for mindre plastikforurening. Bidrag og hjælp havet!"
 ogtitle="Plastic Change: Bekæmp Plastikforurening" 
 ogdescription="Deltag i kampen mod plastikforurening! Få indsigt i bæredygtige løsninger, bidrag til havbeskyttelse, og lær hvordan du kan reducere dit plastforbrug." >
