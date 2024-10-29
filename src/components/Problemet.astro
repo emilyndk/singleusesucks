@@ -1,29 +1,38 @@
 ---
 import { Image } from 'astro:assets';
-import apoteket from "../assets/images/apoteket.jpg";
+import turtlebeach2 from "../assets/images/turtlebeach2.png";
+import turtlebeach3 from "../assets/images/turtlebeach3.png";
 ---
 
-<section class="h-screen bg-hvid" >
-<h2 class="font-[campton-xb] text-sort950 text-7xl">PROBLEMET</h2>
-<h3 class="font-[tiempos] text-sort950 text-3xl">Plastikforurening er skadeligt af flere grunde.</h3>
-<div>
+<section class="h-full lg:h-screen bg-hvid" >
+<div class="grid grid-rows-2 lg:grid-cols-2">
+    <div class="lg:mx-10 lg:mt-16">
+    <h2 class="font-[campton-xb] text-sort950 text-5xl lg:text-7xl">PROBLEMET</h2>
+    <h3 class="font-[tiempos] text-sort950 lg:text-3xl">Plastikforurening er skadeligt af flere grunde.</h3>
     <div class="">
-        <h4 class="font-[campton-xb] text-sort950 text-xl">Skader på dyrelivet</h4>
-        <p class="font-[tiempos] text-sort950 text-lg">Plastik er blevet en uundgåelig del af vores hverdag, især fordi det er et billigt materiale. Brugen af engangsplastik er steget kraftigt, men dette har alvorlige konsekvenser for klimaet og miljøet.</p>
+        <div class="">
+            <h4 class="font-[campton-xb] text-sort950 lg:text-xl">Skader på dyrelivet</h4>
+            <p class="font-[tiempos] text-sort950 lg:text-lg">Plastik er blevet en uundgåelig del af vores hverdag, især fordi det er et billigt materiale. Brugen af engangsplastik er steget kraftigt, men dette har alvorlige konsekvenser for klimaet og miljøet.</p>
+        </div>
+
+        <div class="">
+            <h4 class="font-[campton-xb] text-sort950 lg:text-xl">Forstyrrelse af økosystemer</h4>
+            <p class="font-[tiempos] text-sort950 lg:text-lg">Størstedelen af plastikken fremstilles af fossile brændstoffer og nedbrydes meget langsomt. I mange lande er affaldshåndteringen utilstrækkelig, hvilket betyder, at store mængder plastik ender i naturen. En betydelig del af dette plastik havner i havet, hvor det skader dyrelivet, forstyrrer økosystemerne og bliver til mikroplast, som vi i stigende grad finder i vores fødevarer, drikkevand og luften, vi indånder.</p>
+        </div>
+
+        <div class="">
+            <h4 class="font-[campton-xb] text-sort950 lg:text-xl">Sundhedsrisici for mennesker</h4>
+            <p class="font-[tiempos] text-sort950 lg:text-lg">Plastikforureningen er et voksende problem, og mange steder mangler der både viden, ressourcer og systemer til at bekæmpe det effektivt.</p>
+        </div>
     </div>
 
-    <div class="">
-        <h4 class="font-[campton-xb] text-sort950 text-xl">Forstyrrelse af økosystemer</h4>
-        <p class="font-[tiempos] text-sort950 text-lg">Størstedelen af plastikken fremstilles af fossile brændstoffer og nedbrydes meget langsomt. I mange lande er affaldshåndteringen utilstrækkelig, hvilket betyder, at store mængder plastik ender i naturen. En betydelig del af dette plastik havner i havet, hvor det skader dyrelivet, forstyrrer økosystemerne og bliver til mikroplast, som vi i stigende grad finder i vores fødevarer, drikkevand og luften, vi indånder.</p>
+        <div class="font-[oliver] text-sort950 lg:text-lg">
+            <p>Plastik kan skade dyrene på mange måder.</p>
+        </div>
     </div>
-
     <div class="">
-        <h4 class="font-[campton-xb] text-sort950 text-xl">Sundhedsrisici for mennesker</h4>
-        <p class="font-[tiempos] text-sort950 text-lg">Plastikforureningen er et voksende problem, og mange steder mangler der både viden, ressourcer og systemer til at bekæmpe det effektivt.</p>
+        <Image src={turtlebeach2} alt="Skildpadde på strand med plastik" class="invisible absolute lg:relative z-10 lg:visible lg:max-h-screen" loading="lazy"/>
+        <Image src={turtlebeach3} alt="Skildpadde på strand med plastik" class="lg:invisible z-[-10] lg:max-h-screen" loading="lazy"/>
     </div>
-</div>
-
-<div class="font-[oliver] text-sort950 text-lg">
-    <p>Plastik kan skade dyrene på mange måder.</p>
 </div>
 </section>
