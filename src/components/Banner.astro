@@ -1,0 +1,58 @@
+---
+
+import { Image } from 'astro:assets';
+import lidl from "../assets/images/lidl.webp"
+import amc from "../assets/images/amc.webp"
+import ricoh from "../assets/images/ricoh.webp"
+import rema from "../assets/images/rema.webp"
+import lastobject from "../assets/images/lastobject.webp"
+import hjemhavn from "../assets/images/hjemhavn.webp"
+import friluft from "../assets/images/friluftsland.webp"
+import ironpump from "../assets/images/ironpump.webp"
+import blackcotton from "../assets/images/blackcotton.webp"
+import araven from "../assets/images/araven.webp"
+import myphoner from "../assets/images/myphoner.svg"
+---
+
+<section id="banner" class="border-2 border-sort950 flex flex-row items-center overflow-hidden p-4 h-24">
+    <div class="flex gap-16 animate-scroll space-x-4">
+        <!-- Original set of images -->
+        <Image src={lidl} alt="Lidl logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={amc} alt="AMC logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={ricoh} alt="Ricoh logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={rema} alt="Rema logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={lastobject} alt="Last Object logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={hjemhavn} alt="Hjemhavn logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={ironpump} alt="Ironpump logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={araven} alt="Araven logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={friluft} alt="Friluftsland logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={blackcotton} alt="Black Cotton logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={myphoner} alt="Myphoner logo" class="w-20 max-w-[100px]" loading="lazy" />
+
+        <!-- Duplicate set of images -->
+        <Image src={lidl} alt="Lidl logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={amc} alt="AMC logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={ricoh} alt="Ricoh logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={rema} alt="Rema logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={lastobject} alt="Last Object logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={hjemhavn} alt="Hjemhavn logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={ironpump} alt="Ironpump logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={araven} alt="Araven logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={friluft} alt="Friluftsland logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={blackcotton} alt="Black Cotton logo" class="w-20 max-w-[100px]" loading="lazy" />
+        <Image src={myphoner} alt="Myphoner logo" class="w-20 max-w-[100px]" loading="lazy" />
+    </div>
+</section>
+
+<style>
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); } /* Adjusted to account for duplication */
+    }
+
+    .animate-scroll {
+        display: flex;
+        animation: scroll 20s linear infinite; /* Adjust duration to fit your needs */
+    }
+</style>
+
