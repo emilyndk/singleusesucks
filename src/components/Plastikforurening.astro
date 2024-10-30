@@ -15,10 +15,10 @@ import arrow from "../assets/images/arrow1.svg";
     </div>
 
     <div class="flex justify-center">
-        <div class="font-[tiempos] text-hvid lg:text-lg grid grid-rows-[1fr_2fr_1fr] gap-9">
-            <p class="plastik_p">Plastik er blevet en uundgåelig del af vores hverdag, især fordi det er et billigt materiale. Brugen af engangsplastik er steget kraftigt, men dette har alvorlige konsekvenser for klimaet og miljøet.</p>
-            <p class="plastik_p lg:ml-10">Størstedelen af plastikken fremstilles af fossile brændstoffer og nedbrydes meget langsomt. I mange lande er affaldshåndteringen utilstrækkelig, hvilket betyder, at store mængder plastik ender i naturen. En betydelig del af dette plastik havner i havet, hvor det skader dyrelivet, forstyrrer økosystemerne og bliver til mikroplast, som vi i stigende grad finder i vores fødevarer, drikkevand og luften, vi indånder.</p>
-            <p class="plastik_p lg:ml-20">Plastikforureningen er et voksende problem, og mange steder mangler der både viden, ressourcer og systemer til at bekæmpe det effektivt.</p>
+        <div class="font-[tiempos] text-hvid lg:text-lg grid grid-rows-[1fr_2fr_1fr] gap-9" id="stagger">
+            <p class="plastik_p staggeranimation">Plastik er blevet en uundgåelig del af vores hverdag, især fordi det er et billigt materiale. Brugen af engangsplastik er steget kraftigt, men dette har alvorlige konsekvenser for klimaet og miljøet.</p>
+            <p class="plastik_p staggeranimation lg:ml-10">Størstedelen af plastikken fremstilles af fossile brændstoffer og nedbrydes meget langsomt. I mange lande er affaldshåndteringen utilstrækkelig, hvilket betyder, at store mængder plastik ender i naturen. En betydelig del af dette plastik havner i havet, hvor det skader dyrelivet, forstyrrer økosystemerne og bliver til mikroplast, som vi i stigende grad finder i vores fødevarer, drikkevand og luften, vi indånder.</p>
+            <p class="plastik_p staggeranimation lg:ml-20">Plastikforureningen er et voksende problem, og mange steder mangler der både viden, ressourcer og systemer til at bekæmpe det effektivt.</p>
         </div>
     </div>
 
@@ -47,3 +47,19 @@ import arrow from "../assets/images/arrow1.svg";
 }
 }
 </style>
+
+<script>
+/* Import af Motion One biblioteket */
+import { animate, stagger, inView, scroll, timeline } from "motion";
+
+  /* Stagger animation */
+	inView( "#stagger" , () =>{
+		animate(
+		".staggeranimation",
+		{ opacity: [0, 1] },
+		{ 
+			delay: stagger(1, { start: 2 })
+		}
+		)
+	})
+</script>
