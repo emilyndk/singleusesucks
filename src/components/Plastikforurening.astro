@@ -1,19 +1,33 @@
 ---
 import { Image } from 'astro:assets';
-import apoteket from "../assets/images/apoteket.jpg";
+import trash1 from "../assets/images/trash1.png";
+import trash2 from "../assets/images/trash2.png";
+import trash3 from "../assets/images/trash3.png";
+import trash4 from "../assets/images/trash4.png";
+import monkey from "../assets/images/monkey.png";
 ---
 
 <section class="h-lvh lg:h-screen bg-turq700" >
     <div class="flex justify-center">
-<h2 class="font-[campton-xb] text-hvid text-5xl lg:text-7xl lg:mt-16">PLASTIK&shy;FORUENING</h2>
-</div>
-<div class="font-[tiempos] text-hvid lg:text-lg">
-<p>Plastik er blevet en uundgåelig del af vores hverdag, især fordi det er et billigt materiale. Brugen af engangsplastik er steget kraftigt, men dette har alvorlige konsekvenser for klimaet og miljøet.</p>
-<p>Størstedelen af plastikken fremstilles af fossile brændstoffer og nedbrydes meget langsomt. I mange lande er affaldshåndteringen utilstrækkelig, hvilket betyder, at store mængder plastik ender i naturen. En betydelig del af dette plastik havner i havet, hvor det skader dyrelivet, forstyrrer økosystemerne og bliver til mikroplast, som vi i stigende grad finder i vores fødevarer, drikkevand og luften, vi indånder.</p>
-<p>Plastikforureningen er et voksende problem, og mange steder mangler der både viden, ressourcer og systemer til at bekæmpe det effektivt.</p>
-</div>
+        <h2 class="font-[campton-xb] text-hvid text-5xl lg:text-7xl lg:lg:mb-2 lg:mt-16">PLASTIK&shy;FORUENING</h2>
+    </div>
 
-<div class="font-[oliver] text-hvid lg:text-lg">
-    <p>Plastik kan skade dyrene på mange måder.<br> De kan fx skære sig, sidde fast eller blive kvalt.</p>
-</div>
+    <div class="flex justify-center">
+        <div class="font-[tiempos] text-hvid lg:text-lg grid grid-rows-[1fr_2fr_1fr] gap-9">
+            <p class="plastik_p">Plastik er blevet en uundgåelig del af vores hverdag, især fordi det er et billigt materiale. Brugen af engangsplastik er steget kraftigt, men dette har alvorlige konsekvenser for klimaet og miljøet.</p>
+            <p class="plastik_p lg:ml-10">Størstedelen af plastikken fremstilles af fossile brændstoffer og nedbrydes meget langsomt. I mange lande er affaldshåndteringen utilstrækkelig, hvilket betyder, at store mængder plastik ender i naturen. En betydelig del af dette plastik havner i havet, hvor det skader dyrelivet, forstyrrer økosystemerne og bliver til mikroplast, som vi i stigende grad finder i vores fødevarer, drikkevand og luften, vi indånder.</p>
+            <p class="plastik_p lg:ml-20">Plastikforureningen er et voksende problem, og mange steder mangler der både viden, ressourcer og systemer til at bekæmpe det effektivt.</p>
+        </div>
+    </div>
+
+    <div class="font-[oliver] text-hvid lg:text-lg rotate-12">
+        <p class="text-center mb-5">Plastik kan skade<br>dyrene på mange måder.</p>
+        <p class="text-center"> De kan fx skære sig,<br> sidde fast eller blive<br> kvalt.</p>
+    </div>
 </section>
+
+<style>
+.plastik_p{
+    width: 55ch;
+}
+</style>

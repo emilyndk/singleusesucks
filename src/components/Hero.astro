@@ -1,18 +1,15 @@
 ---
 import { Image } from 'astro:assets';
 import logo from "../assets/images/logo_plasticchange.svg";
-import plastik1 from "../assets/images/plastik1.png";
-import plastik2 from "../assets/images/plastik2.png";
-import plastik3 from "../assets/images/plastik3.png";
-import trash1 from "../assets/images/trash1.png";
-import trash2 from "../assets/images/trash2.png";
-import trash3 from "../assets/images/trash3.png";
-import trash4 from "../assets/images/trash4.png";
-import monkey from "../assets/images/monkey.png";
+import plastik2 from "../assets/images/skrald1.png";
+import plastik1 from "../assets/images/skrald2.png";
+import plastik3 from "../assets/images/skrald3.png";
+
 ---
 
 
 <section class="h-lvh lg:h-screen bg-sort950">
+    <div class="relative top-1/4 lg:top-[10%]">
     <div class="grid grid-rows-2">
         <div class="flex justify-center">
         <Image src={logo} alt="Plastic Change logo" loading="lazy"/>
@@ -24,4 +21,9 @@ import monkey from "../assets/images/monkey.png";
             </div>
         </div>
     </div>
+    </div>
+
+    <Image src={plastik1} alt="Plastic Change logo" class="relative  lg:top-[-49%]" loading="lazy"/>
+    <Image src={plastik2} alt="Plastic Change logo" class="relative lg:top-[-157%]" loading="lazy"/>
+    <Image src={plastik3} alt="Plastic Change logo" class="relative invisible lg:visible lg:top-[-273%]" loading="lazy"/>
 </section>
