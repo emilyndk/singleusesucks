@@ -1,19 +1,65 @@
 ---
 import { Image } from 'astro:assets';
-import apoteket from "../assets/images/apoteket.jpg";
+import trash1 from "../assets/images/trash1.png";
+import trash2 from "../assets/images/trash2.png";
+import trash3 from "../assets/images/trash3.png";
+import trash4 from "../assets/images/trash4.png";
+import trash5 from "../assets/images/trash5.png";
+import monkey from "../assets/images/monkey.png";
+import arrow from "../assets/images/arrow1.svg";
 ---
 
 <section class="h-lvh lg:h-screen bg-turq700" >
     <div class="flex justify-center">
-<h2 class="font-[campton-xb] text-hvid text-5xl lg:text-7xl lg:mt-16">PLASTIK&shy;FORUENING</h2>
-</div>
-<div class="font-[tiempos] text-hvid lg:text-lg">
-<p>Plastik er blevet en uundgåelig del af vores hverdag, især fordi det er et billigt materiale. Brugen af engangsplastik er steget kraftigt, men dette har alvorlige konsekvenser for klimaet og miljøet.</p>
-<p>Størstedelen af plastikken fremstilles af fossile brændstoffer og nedbrydes meget langsomt. I mange lande er affaldshåndteringen utilstrækkelig, hvilket betyder, at store mængder plastik ender i naturen. En betydelig del af dette plastik havner i havet, hvor det skader dyrelivet, forstyrrer økosystemerne og bliver til mikroplast, som vi i stigende grad finder i vores fødevarer, drikkevand og luften, vi indånder.</p>
-<p>Plastikforureningen er et voksende problem, og mange steder mangler der både viden, ressourcer og systemer til at bekæmpe det effektivt.</p>
-</div>
+        <h2 class="font-[campton-xb] text-hvid text-5xl mt-10 mx-10 lg:mx-0 lg:text-7xl lg:lg:mb-2 lg:mt-16">PLASTIK&shy;FORUENING</h2>
+    </div>
 
-<div class="font-[oliver] text-hvid lg:text-lg">
-    <p>Plastik kan skade dyrene på mange måder.<br> De kan fx skære sig, sidde fast eller blive kvalt.</p>
-</div>
+    <div class="flex justify-center">
+        <div class="font-[tiempos] text-hvid lg:text-lg grid grid-rows-[1fr_2fr_1fr] gap-9" id="stagger">
+            <p class="plastik_p staggeranimation">Plastik er blevet en uundgåelig del af vores hverdag, især fordi det er et billigt materiale. Brugen af engangsplastik er steget kraftigt, men dette har alvorlige konsekvenser for klimaet og miljøet.</p>
+            <p class="plastik_p staggeranimation lg:ml-10">Størstedelen af plastikken fremstilles af fossile brændstoffer og nedbrydes meget langsomt. I mange lande er affaldshåndteringen utilstrækkelig, hvilket betyder, at store mængder plastik ender i naturen. En betydelig del af dette plastik havner i havet, hvor det skader dyrelivet, forstyrrer økosystemerne og bliver til mikroplast, som vi i stigende grad finder i vores fødevarer, drikkevand og luften, vi indånder.</p>
+            <p class="plastik_p staggeranimation lg:ml-20">Plastikforureningen er et voksende problem, og mange steder mangler der både viden, ressourcer og systemer til at bekæmpe det effektivt.</p>
+        </div>
+    </div>
+
+    <div class="font-[oliver] text-hvid lg:text-lg rotate-12">
+        <p class="text-center mb-5 relative left-[-15%] lg:left-[15%]">Plastik kan skade<br>dyrene på mange måder.</p>
+        <p class="text-center relative left-[-15%] lg:left-[15%]"> De kan fx skære sig,<br> sidde fast eller blive<br> kvalt.</p>
+    </div>
+
+    <Image src={trash1} alt="Trash1" class="relative top-[-20%] invisible lg:visible lg:top-[-50%] lg:w-5/12" loading="lazy"/>
+    <Image src={trash2} alt="Trash2" class="relative top-[40%] invisible lg:visible lg:top-[-160%] lg:left-[-5%] lg:w-4/12" loading="lazy"/>
+    <Image src={trash3} alt="Trash3" class="relative top-[40%] invisible lg:visible lg:top-[-217%] lg:left-[67%] lg:w-4/12" loading="lazy"/>
+    <Image src={trash4} alt="Trash4" class="relative top-[40%] invisible lg:visible lg:top-[-300%] lg:left-[83%] lg:w-3/12" loading="lazy"/>
+    <Image src={trash5} alt="Trash5" class="relative top-[-360%] left-[50%] w-8/12 lg:top-[-360%] lg:left-[70%] lg:w-4/12" loading="lazy"/>
+    <Image src={monkey} alt="Abe" class="relative top-[-295%] left-[50%] w-5/12 lg:top-[-325%] lg:left-[70%] lg:w-3/12 z-50" loading="lazy"/>
+    <Image src={arrow} alt="arrow" class="relative top-[-320%] left-[60%] w-[10%] lg:top-[-360%] lg:left-[70%] lg:w-[6%]" loading="lazy"/>
 </section>
+
+<style>
+.plastik_p{
+    width:39ch;
+}
+
+@media (min-width: 800px) {
+ .plastik_p{
+    width: 55ch;
+}
+}
+</style>
+
+<script>
+/* Import af Motion One biblioteket */
+import { animate, stagger, inView, scroll, timeline } from "motion";
+
+  /* Stagger animation */
+	inView( "#stagger" , () =>{
+		animate(
+		".staggeranimation",
+		{ opacity: [0, 1] },
+		{ 
+			delay: stagger(1, { start: 2 })
+		}
+		)
+	})
+</script>
