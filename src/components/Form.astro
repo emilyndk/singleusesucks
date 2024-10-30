@@ -117,5 +117,11 @@ input[type="radio"]:checked::after {
     left: 50%;
     transform: translate(-50%, -50%); /* Center the dot */
 }
+input[type="number"]:focus {
+        border-color: var(--cerise-red-600); /* Pink color for border */
+        outline: none; 
+        box-shadow: var(--cerise-red-600); /* Remove default outline */
+        /* Optional: shadow for enhanced focus effect */
+    }
 
 </style>
