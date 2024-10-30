@@ -4,12 +4,14 @@ import trash1 from "../assets/images/trash1.png";
 import trash2 from "../assets/images/trash2.png";
 import trash3 from "../assets/images/trash3.png";
 import trash4 from "../assets/images/trash4.png";
+import trash5 from "../assets/images/trash5.png";
 import monkey from "../assets/images/monkey.png";
+import arrow from "../assets/images/arrow1.svg";
 ---
 
 <section class="h-lvh lg:h-screen bg-turq700" >
     <div class="flex justify-center">
-        <h2 class="font-[campton-xb] text-hvid text-5xl lg:text-7xl lg:lg:mb-2 lg:mt-16">PLASTIK&shy;FORUENING</h2>
+        <h2 class="font-[campton-xb] text-hvid text-5xl mt-10 mx-10 lg:mx-0 lg:text-7xl lg:lg:mb-2 lg:mt-16">PLASTIK&shy;FORUENING</h2>
     </div>
 
     <div class="flex justify-center">
@@ -21,13 +23,27 @@ import monkey from "../assets/images/monkey.png";
     </div>
 
     <div class="font-[oliver] text-hvid lg:text-lg rotate-12">
-        <p class="text-center mb-5">Plastik kan skade<br>dyrene på mange måder.</p>
-        <p class="text-center"> De kan fx skære sig,<br> sidde fast eller blive<br> kvalt.</p>
+        <p class="text-center mb-5 relative left-[-15%] lg:left-[15%]">Plastik kan skade<br>dyrene på mange måder.</p>
+        <p class="text-center relative left-[-15%] lg:left-[15%]"> De kan fx skære sig,<br> sidde fast eller blive<br> kvalt.</p>
     </div>
+
+    <Image src={trash1} alt="Trash1" class="relative top-[-20%] invisible lg:visible lg:top-[-50%] lg:w-5/12" loading="lazy"/>
+    <Image src={trash2} alt="Trash2" class="relative top-[40%] invisible lg:visible lg:top-[-160%] lg:left-[-5%] lg:w-4/12" loading="lazy"/>
+    <Image src={trash3} alt="Trash3" class="relative top-[40%] invisible lg:visible lg:top-[-217%] lg:left-[67%] lg:w-4/12" loading="lazy"/>
+    <Image src={trash4} alt="Trash4" class="relative top-[40%] invisible lg:visible lg:top-[-300%] lg:left-[83%] lg:w-3/12" loading="lazy"/>
+    <Image src={trash5} alt="Trash5" class="relative top-[-360%] left-[50%] w-8/12 lg:top-[-360%] lg:left-[70%] lg:w-4/12" loading="lazy"/>
+    <Image src={monkey} alt="Abe" class="relative top-[-295%] left-[50%] w-5/12 lg:top-[-325%] lg:left-[70%] lg:w-3/12 z-50" loading="lazy"/>
+    <Image src={arrow} alt="arrow" class="relative top-[-320%] left-[60%] w-[10%] lg:top-[-360%] lg:left-[70%] lg:w-[6%]" loading="lazy"/>
 </section>
 
 <style>
 .plastik_p{
+    width:39ch;
+}
+
+@media (min-width: 800px) {
+ .plastik_p{
     width: 55ch;
+}
 }
 </style>
