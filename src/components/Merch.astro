@@ -5,8 +5,7 @@ import tee from "../assets/images/tshirt.png";
 import dancingturtle from "../assets/images/turtle.png";
 import kop from "../assets/images/kopsus.png";
 import merchbg from "../assets/images/merchbackg.jpg";
-import trash2 from "../assets/images/trash2.png"
-import trash4 from "../assets/images/trash4.png"
+import lazy from "../assets/images/lazy_way.png"
 ---
 
 <section class="h-screen" id="merch">
@@ -14,15 +13,16 @@ import trash4 from "../assets/images/trash4.png"
         <Image src={merchbg} class="scrollzoomimg h-full w-full object-cover" alt="Undervands-billede" loading="lazy"/>
         <span class="absolute inset-0 bg-black/40"></span>
     </div>
-    
-    <div class="pb-11">
+
+ <div class="top-0 relative z-30">
     <h2 class="uppercase relative top-16 pl-[45rem] font-[campton-xb] text-hvid text-7xl pb-8">merchandise</h2>
     <h3 class="relative top-16 pl-[50rem] font-[tiempos] text-hvid text-3xl pb-4">Clean seas, clean style ₊ ⊹</h3>
     <p class="relative top-16 pl-[53rem] font-[tiempos] text-hvid text-lg leading-normal">Vi donerer 5% af omsætningen til havet... året rundt! <br>
         Plastic Change merchandise produceres og distribueres af <span class="font-[tiempos-italic] underline cursor-pointer hover:text-pink">Hjemhavn ApS</span>.</p>
         </div>
-    
-    <div class="relative top-16 pl-[1192px] font-[campton-xb] text-hvid text-lg leading-normal">
+        
+        
+        <div class="relative pt-10 top-16 pl-[1100px] font-[campton-xb] text-hvid text-lg leading-normal">
     <Button variant="primary" size="large">
         <span class="inline-block align-middle pr-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 46 46" fill="none">
@@ -32,33 +32,23 @@ import trash4 from "../assets/images/trash4.png"
         <a href="https://www.hjemhavn.dk/collections/plastic-change-merchandise" target="_blank">BESØG SHOP</a></Button>
     </div>
 
-    <div class="pt-4">
-            <div class="flex flex-col items-center pr-[50rem]">
-            <span class="relative top-16 left-60 font-[oliver] text-hvid text-2xl z-10">Tee "Plastic Change" - Unisex <br>| 100% økologisk bomuld</span>
-            <span class="relative top-24 left-16 z-10">
-            <svg xmlns="http://www.w3.org/2000/svg" width="130" height="34" viewBox="0 0 130 34" fill="none">
-                <path d="M126 2.50022C126 1.39565 126.895 0.500223 128 0.500222C129.104 0.500225 130 1.39565 130 2.50022L126 2.50022ZM0.385542 17.6513C-0.208834 16.7203 0.0640723 15.4837 0.995086 14.8893L16.1669 5.20341C17.0979 4.60903 18.3345 4.88194 18.9288 5.81295C19.5232 6.74397 19.2503 7.98054 18.3193 8.57492L4.83327 17.1846L13.443 30.6706C14.0373 31.6017 13.7644 32.8382 12.8334 33.4326C11.9024 34.027 10.6658 33.7541 10.0715 32.8231L0.385542 17.6513ZM130 2.50022C130 13.7124 126.496 21.6581 119.716 26.7239C113.061 31.6958 103.594 33.6227 92.2349 33.6908C69.5316 33.8268 37.7682 26.5012 1.64028 18.5281L2.50231 14.6221C38.8743 22.6491 70.0752 29.8235 92.211 29.6908C103.272 29.6246 111.693 27.7249 117.322 23.5195C122.825 19.408 126 12.8255 126 2.50022L130 2.50022Z" fill="#FFFAFA"/>
-            </svg>
-            </span>
-            </div>
-        <a href="https://www.hjemhavn.dk/collections/plastic-change-merchandise/products/tee-plastic-change-men-unisex" target="_blank" class="invisible"><Image src={tee} alt="T-shirt merchandise fra Plastic Change" class="visible rotate-[4.4deg] relative bottom-[450px] right-56 w-[700px] h-auto duration-500 hover:rotate-[14deg] hover:ease-in-out" id='item1'></Image></a>
+    <!-- <img src="/src/assets/images/lazy_way.svg" alt="details" class="z-20 absolute"> -->
+     <a href="https://www.hjemhavn.dk/collections/plastic-change-merchandise/products/emaljekrus-plastic-change-bla-kant" target="_blank" class="invisible"><Image src={kop}
+        alt="Plastic Change's emaljekrus merchandise"
+        class="visible relative rotate-[-14deg] transform translate-x-[179%] translate-y-[55%] w-[400px] h-auto duration-500 hover:rotate-[14deg] hover:ease-in-out z-50" id='item2'></Image></a>
+
+    <a href="https://www.hjemhavn.dk/collections/plastic-change-merchandise/products/tee-plastic-change-men-unisex" target="_blank" class="invisible"><Image src={tee}
+        alt="T-shirt merchandise fra Plastic Change" class="visible absolute rotate-[4.4deg] transform translate-x-[-23%] translate-y-[-93%] w-[700px] h-auto duration-500 hover:rotate-[14deg] hover:ease-in-out z-50"
+        id='item1'></Image></a>
+
+        <div class="relative">
+    <Image src={dancingturtle} alt="Dansende skildpadde" class="overflow-hidden absolute bottom-[-5.5rem] right-10 wobble-hor-top w-80 h-auto z-10" loading="lazy"></Image>
     </div>
 
-    <div class="pt-4">
-        <a href="https://www.hjemhavn.dk/collections/plastic-change-merchandise/products/emaljekrus-plastic-change-bla-kant" target="_blank" class="invisible"><Image src={kop} alt="Plastic Change's emaljekrus merchandise" class="visible rotate-[-14deg] relative bottom-[660px] right-80 flex justify-self-end w-[400px] h-auto duration-500 hover:rotate-[14deg] hover:ease-in-out z-20" id='item2'></Image></a>
-   
-         <div class="flex flex-col items-center">
-                <span class="relative bottom-[58rem] pr-[20rem] font-[oliver] text-hvid text-2xl z-10">Emaljekrus "Plastic Change”<br>| 100% unikt fremstillet</span>
-                <span class="relative bottom-[56rem] right-14 z-10">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="171" height="64" viewBox="0 0 171 64" fill="none">
-                      <path d="M3.72204 0.98285C3.16028 0.0317961 1.9339 -0.283792 0.98285 0.277965C0.0317961 0.839721 -0.283792 2.0661 0.277965 3.01715L3.72204 0.98285ZM170.834 41.7984C171.275 40.7856 170.811 39.6072 169.798 39.1663L153.295 31.9809C152.282 31.5399 151.104 32.0035 150.663 33.0162C150.222 34.029 150.685 35.2074 151.698 35.6483L166.368 42.0354L159.981 56.7053C159.54 57.718 160.003 58.8964 161.016 59.3374C162.029 59.7783 163.207 59.3148 163.648 58.302L170.834 41.7984ZM0.277965 3.01715C19.8294 36.1178 39.6571 55.2037 66.188 61.2916C92.5669 67.3448 125.097 60.4187 169.732 42.8612L168.268 39.1388C123.714 56.6645 92.1855 63.1533 67.0826 57.393C42.1316 51.6675 23.0539 33.7118 3.72204 0.98285L0.277965 3.01715Z" fill="#FFFAFA"/>
-                    </svg>
-                </span>
-            </div>
-    </div>
-    
-    <Image src={dancingturtle} alt="Dansende skildpadde" class="overflow-hidden relative wobble-hor-top bottom-[77rem] flex justify-self-end justify-end right-10 w-72 h-auto z-10" loading="lazy"></Image>
-    
+  <div class="relative">
+     <Image src={lazy} alt="Tekst info om tshirt og kop" class="overflow-hidden absolute bottom-[0rem] right-[49rem] w-80 h-auto z-10" loading="lazy"></Image>
+ </div>
+
 </section>
 
 <script>

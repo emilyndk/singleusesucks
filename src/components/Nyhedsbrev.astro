@@ -1,13 +1,21 @@
 ---
-import Button from "./Button.astro"
+import { Image } from 'astro:assets';
+import Button from "./Button.astro";
+import seal from "../assets/images/seal.png";
+import turtle from "../assets/images/turtlenb.png"
 ---
-<section class="h-4/6 overflow-hidden" id="nyhedsbrev">
-    <div class="flex justify-center items-center">
+<section class="h-4/6" id="nyhedsbrev">
+    <div class="flex justify-center items-center relative">
+      <Image src={seal} alt ="en sæl" class="absolute z-20 wobble-ver-right right-20 w-[25%] h-auto" loading="lazy"></Image>
+
+    <Image src={turtle} alt ="en skildpadde" class="absolute z-20 wobble-ver-right left-0 w-[20%] h-auto top-72" loading="lazy"></Image>
+
     <form action="#" method="post" class="absolute z-20 text-lg font-[campton-sb]" data-netlify="true">
         <label for="email">Email</label>
 
-        <div class="flex justify-center gap-2 cursor-pointer pt-2">
-          <span class="w-[1200px] absolute -z-10 cursor-default"><img src="/src/assets/images/tilmeld_dig.svg" alt="" class="absolute transform -translate-y-[160px] fotoinview" loading="lazy">
+        <div class="flex justify-center gap-2 cursor-pointer pt-2 overflow-hidden">
+          <span class=" w-[1200px] absolute -z-10 cursor-default"><img src="/src/assets/images/tilmeld_dig.svg" alt="" class="absolute transform -translate-y-[160px] fotoinview will-change-transform"
+            loading="lazy">
        </span>
           
 
@@ -16,7 +24,7 @@ import Button from "./Button.astro"
         </div>
     </form>
 
-     <div class="w-full h-[500px] overflow-clip">
+     <div class="w-full h-[500px] overflow-clip -z-50">
     <video class="rotate-180" autoplay muted loop>
       <source src="/src/assets/images/nyhedsbrev_video.mp4" type="video/mp4" />
       Your browser does not support the video tag.
@@ -31,6 +39,6 @@ import Button from "./Button.astro"
 
     /* inView animation */
 	inView( ".fotoinview" , () =>{
-	animate( ".fotoinview", { y: [1000, -150 ], opacity: [0, 1] }, { duration: 1.5 });
+	animate( ".fotoinview", { y: [0, -163 ], opacity: [0, 1] }, { duration: 1.5 });
 	})
 </script>
