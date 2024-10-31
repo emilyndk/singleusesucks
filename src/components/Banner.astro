@@ -51,6 +51,8 @@ import myphoner from "../assets/images/myphoner.svg"
   <a href="https://www.myphoner.com" target="_blank" rel="noopener noreferrer">
     <Image src={myphoner} alt="Myphoner logo" class="w-20 max-w-[100px]" loading="lazy" />
   </a>
+
+
   
 
     </div>
@@ -61,14 +63,18 @@ import myphoner from "../assets/images/myphoner.svg"
 <style>
 
     
-    @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); } /* Adjusted to account for duplication */
-    }
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); } /* Moves the entire length of both sets */
+}
 
-    .animate-scroll {
-        display: flex;
-        animation: scroll 20s linear infinite; /* Adjust duration to fit your needs */
-    }
+.animate-scroll {
+    display: flex;
+    animation: scroll 20s linear infinite; /* Adjust duration for scroll speed */
+}
+
 </style>
+
+
+
 
