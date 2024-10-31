@@ -26,12 +26,12 @@ import Button from './Button.astro';
         hjælpe os med at skabe en bedre fremtid for os og vores jord/planet.
     </p>
 
-    <article class="grid grid-cols-1 lg:grid-cols-2 border-[1px] bg-hvid border-sort950 shadow-xl rounded-lg p-5 m-10 mx-auto w-4/5 lg:w-3/5 relative"> <!-- Add 'relative' -->
+    <form name="bidrag" class="grid grid-cols-1 lg:grid-cols-2 border-[1px] bg-hvid border-sort950 shadow-xl rounded-lg p-5 m-10 mx-auto w-4/5 lg:w-3/5 relative" data-netlify="true"> <!-- Add 'relative' -->
        
        <div class="col1"> 
       
         
-        <Image src={hjerte} alt="Plastikhjerte" class="absolute w-1/5 lg:w-20 left-[241px] lg:left-[400px] -mt-5 z-10" loading="lazy"/> 
+        <Image src={hjerte} alt="Plastikhjerte" class="hover:rotate-[20deg] duration-500 hover:ease-in-out absolute w-1/5 lg:w-20 left-[241px] lg:left-[400px] -mt-5 z-10" loading="lazy"/> 
         
         <Image src={tak} alt="Talebobbel" class="absolute w-2/5 lg:w-48 left-[-20px] lg:left-[-110px] lg:mt-10 z-20" loading="lazy"/>
         <Image src={hund} alt="Hund" class="" loading="lazy"/>
@@ -50,11 +50,11 @@ import Button from './Button.astro';
             <h3 class="mb-2 text-sort950 font-[campton-xb]">Vælg hvordan du ønsker at bidrage</h3>
             <div class="flex flex-col lg:space-x-4 lg:flex-row ">
                 <label class="flex items-center border border-sort950 rounded-lg p-1 mb-3 lg:mb-0 lg:px-6 bg-hvid">
-                    <input type="radio" name="twoOptions" value="månedligt" class="appearance-none border border-pink w-4 h-4 lg:w-5 lg:h-5 rounded-full relative cursor-pointer focus:outline-none focus:ring-0 checked:border-pink" />
+                    <input type="radio" name="monthly" value="månedligt" class="appearance-none border border-pink w-4 h-4 lg:w-5 lg:h-5 rounded-full relative cursor-pointer focus:outline-none focus:ring-0 checked:border-pink" />
                     <span class="ml-2 text-sm font-[tiempos] text-sort700">Månedligt</span>
                 </label>
                 <label class="flex items-center border border-sort950 rounded-lg p-1 lg:px-6 bg-hvid">
-                    <input type="radio" name="twoOptions" value="engangsbeløb" class="appearance-none border border-pink  w-4 h-4 lg:w-5 lg:h-5 rounded-full relative cursor-pointer focus:outline-none focus:ring-0 checked:border-pink" />
+                    <input type="radio" name="single" value="engangsbeløb" class="appearance-none border border-pink  w-4 h-4 lg:w-5 lg:h-5 rounded-full relative cursor-pointer focus:outline-none focus:ring-0 checked:border-pink" />
                     <span class="ml-2 text-sm font-[tiempos] text-sort700">Engangsbeløb</span>
                 </label>
             </div>
@@ -68,15 +68,15 @@ import Button from './Button.astro';
             <h3 class=" mb-2 text-sort950 font-[campton-xb]">Hvor meget vil du bidrage?</h3>
             <div class="flex flex-col space-y-2">
                 <label class="flex items-center">
-                    <input type="radio" name="threeOptions" value="optionA" class="appearance-none border border-pink  w-4 h-4 lg:w-5 lg:h-5 rounded-full relative cursor-pointer focus:outline-none focus:ring-0 checked:border-pink" checked />
+                    <input type="radio" name="50" value="optionA" class="appearance-none border border-pink  w-4 h-4 lg:w-5 lg:h-5 rounded-full relative cursor-pointer focus:outline-none focus:ring-0 checked:border-pink" checked />
                     <span class="ml-2 text-lg font-[tiempos] text-sort950">50kr</span>
                 </label>
                 <label class="flex items-center">
-                    <input type="radio" name="threeOptions" value="optionB" class="appearance-none border border-pink  w-4 h-4 lg:w-5 lg:h-5 rounded-full relative cursor-pointer focus:outline-none focus:ring-0 checked:border-pink" />
+                    <input type="radio" name="75" value="optionB" class="appearance-none border border-pink  w-4 h-4 lg:w-5 lg:h-5 rounded-full relative cursor-pointer focus:outline-none focus:ring-0 checked:border-pink" />
                     <span class="ml-2 text-lg font-[tiempos] text-sort950">75kr</span>
                 </label>
                 <label class="flex items-center">
-                    <input type="radio" name="threeOptions" value="optionC" class="appearance-none border border-pink  w-4 h-4 lg:w-5 lg:h-5 rounded-full relative cursor-pointer focus:outline-none focus:ring-0 checked:border-pink" />
+                    <input type="radio" name="150" value="optionC" class="appearance-none border border-pink  w-4 h-4 lg:w-5 lg:h-5 rounded-full relative cursor-pointer focus:outline-none focus:ring-0 checked:border-pink" />
                     <span class="ml-2 text-lg font-[tiempos] text-sort950">150kr</span>
                 </label>
             </div>
@@ -89,12 +89,12 @@ import Button from './Button.astro';
         
 
       <div class="mt-4 flex justify-start"> 
-        <Button class="shadow-lg ">Støt nu</Button>
+        <Button type="submit" class="shadow-lg ">Støt nu</Button>
       </div> 
 
     </div>
 
-    </article>
+</form>
 
 </section>
 
