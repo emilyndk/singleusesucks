@@ -41,7 +41,9 @@ const schemamarkup = {
 description="Giver miljøvenlige tips og arbejder for mindre plastikforurening. Bidrag og hjælp havet!"
 ogtitle="Plastic Change: Bekæmp Plastikforurening" 
 ogdescription="Deltag i kampen mod plastikforurening! Få indsigt i bæredygtige løsninger, bidrag til havbeskyttelse, og lær hvordan du kan reducere dit plastforbrug." >
-	<Hero></Hero>
+	
+<div class="progress-bar fixed h-full bg-gradient-to-b from-pink to-pink left-0 origin-top-left top-0 right-[99%] z-50"></div>
+<Hero></Hero>
 <Plastikforurening></Plastikforurening>
 <Problemet></Problemet>
   <HvadKanDuGre></HvadKanDuGre>
@@ -66,3 +68,12 @@ ogdescription="Deltag i kampen mod plastikforurening! Få indsigt i bæredygtige
      <p><Link href="https://www.kea.dk" target="_blank" variant="footer" size="large">En anden side</Link></p>
     </div>
 	</article> -->
+
+  <script>
+	/* Import af Motion One biblioteket */
+	import { animate, scroll } from "motion";
+
+  /*Progress-baren/læseindikatoren */
+	scroll( animate(".progress-bar", { scaleY: [0, 1] }));
+	</script>
+	
