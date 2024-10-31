@@ -1,5 +1,117 @@
 ---
+
 ---
-<div>
-Header - tilføj navigation mm.
-</div>
+
+<nav>
+    <input type="checkbox" class="trigger" id="mainNavButton">
+    <label for="mainNavButton">
+      <div class="burger">
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+      </div>
+    </label>
+    <ul>
+      <li><a href="#" class="uppercase text-hvid font-[campton-sb] lg:text-xl">#SINGLEUSESUCKS</a></li>
+      <li><a href="#" class="uppercase text-hvid font-[campton-sb] lg:text-xl">plastikforurening</a></li>
+      <li><a href="#" class="uppercase text-hvid font-[campton-sb] lg:text-xl">problemet</a></li>
+      <li><a href="#" class="uppercase text-hvid font-[campton-sb] lg:text-xl">hvad kan du gøre?</a></li>
+      <li><a href="#" class="uppercase text-hvid font-[campton-sb] lg:text-xl">hvem er vi</a></li>
+      <li><a href="#" class="uppercase text-hvid font-[campton-sb] lg:text-xl">bidrag</a></li>
+    <li><a href="#" class="uppercase text-hvid font-[campton-sb] lg:text-xl">merchandise</a></li>
+     <li><a href="#" class="uppercase text-hvid font-[campton-sb] lg:text-xl">nyhedsbrev</a></li>
+    </ul>
+  </nav>
+
+  <style>
+    nav {
+  position: sticky;
+  background-color: #1a1a1a;
+  z-index: 500;
+}
+
+nav input {
+  display: none;
+}
+
+nav ul {
+  display: none;
+}
+
+nav a {
+  display: block;
+  padding: 0.4em;
+  background-color: #1a1a1a;
+}
+
+nav a:hover {
+  background-color: #1a1a1a;
+}
+
+nav label {
+  display: block;
+  position: relative;
+  text-align: left;
+  padding: 1em;
+}
+
+nav .burger {
+  position: absolute;
+  cursor: pointer;
+  user-select: none;
+  top: 0.8em;
+  right: 0.4em;
+  width: 2em;
+  height: 2em;
+}
+
+nav .burger span {
+  display: block;
+  height: 3px;
+  margin: 4px;
+  border-radius: 5px;
+  background-color: #ffeff1;
+  transition: all 0.3s ease-in-out;
+}
+
+nav input:checked ~ ul {
+  display: block;
+}
+
+nav input:checked ~ label > .burger > span:nth-child(2) {
+  width: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+nav input:checked ~ label > .burger > span:nth-child(1) {
+  position: relative;
+  top: 7px;
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in-out;
+}
+
+nav input:checked ~ label > .burger > span:nth-child(3) {
+  position: relative;
+  top: -7px;
+  transform: rotate(-45deg);
+  transition: all 0.3s ease-in-out;
+}
+
+@media all and (min-width: 768px) {
+  nav label {
+    display: none;
+  }
+  nav ul {
+    display: block;
+    text-align: right;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul a {
+    background-color: transparent;
+  }
+}
+
+  </style>
