@@ -3,17 +3,17 @@ import Button from "./Button.astro"
 ---
 <section class="h-4/6" id="nyhedsbrev">
     <div class="flex justify-center items-center">
-    <form action="#" method="post" class="absolute z-20">
+    <form action="#" method="post" class="absolute z-20" data-netlify="true">
         <label for="email">Email</label>
 
-        <div class="flex gap-2">
-        <input type="email" id="email" name="email" placeholder="Skriv din mail her" class="rounded-lg h-[60px]"></input>
-        <Button variant="primary" size="large"> <input type="submit" value="Send"></Button>
+        <div class="flex gap-2 cursor-pointer">
+        <input type="email" id="email" name="email" placeholder="Skriv din mail her" class="rounded-lg h-[60px] border-2 border-sort950 hover:border-pink caret-pink-500 "></input>
+        <Button variant="primary" size="large"> <input type="submit" value="Send" required></Button>
         </div>
     </form>
 
      <div class="w-full h-[500px] overflow-clip">
-    <video class="rotate-180" autoPlay muted loop>
+    <video class="rotate-180" autoplay muted loop>
       <source src="/src/assets/images/nyhedsbrev_video.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
