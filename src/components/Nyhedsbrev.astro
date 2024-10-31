@@ -1,48 +1,22 @@
 ---
-
+import Button from "./Button.astro"
 ---
-<section class="h-9" id="nyhedsbrev">
-    <div>
+<section class="h-4/6" id="nyhedsbrev">
+    <div class="flex justify-center items-center">
+    <form action="#" method="post" class="absolute z-20">
+        <label for="email">Email</label>
 
-    <form action="#" method="post" class="absolute  z-20">
-        <label for="antal">Antal:</label>
-        <input type="number" id="antal" name="antal" placeholder="1"></input>
-
-        <div>
-            <span>Levering:</span>
-            <input type="radio" id="levering" name="levering"></input>
-            <label for="levering">Postnord</label>
-            <input type="radio" id="levering" name="levering"></input>
-            <label class="levering" for="levering">UPS</label>
+        <div class="flex gap-2">
+        <input type="email" id="email" name="email" placeholder="Skriv din mail her" class="rounded-lg h-[60px]"></input>
+        <Button variant="primary" size="large"> <input type="submit" value="Send"></Button>
         </div>
-
-        <label for="navn">Navn:</label>
-        <input type="text" id="navn" name="navn" placeholder="Anders And"></input>
-
-        <label for="text">Adresse:</label>
-        <input type="text" id="text" name="adresse" placeholder="Søndergårdvej 14"></input>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="info@mail.dk"></input>
-
-        <label for="text">Postnummer:</label>
-        <input type="text" id="text" name="postnummer" placeholder="2300"></input>
-
-        <label for="text">Bynavn:</label>
-        <input type="text" id="text" name="bynavn" placeholder="København"></input>
-
-        <label for="tel">Telefon nr:</label>
-        <input type="tel" id="tel" name="tel" placeholder="+45XXXXXXXX"></input>
-
-        <label for="nyhedsbrev">Nyhedsbrev:</label>
-        <input type="checkbox" id="nyhedsbrev" name="nyhedsbrev"></input>
-
-        <input type="submit" value="Indsend">
     </form>
 
-    <video class="h-1/2 w-auto rotate-180 -z-20 overflow-clip" autoPlay muted loop>
+     <div class="w-full h-[500px] overflow-clip">
+    <video class="rotate-180" autoPlay muted loop>
       <source src="/src/assets/images/nyhedsbrev_video.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
+    </div>
     </div>
 </section>
