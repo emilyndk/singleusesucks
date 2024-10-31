@@ -14,45 +14,66 @@ import araven from "../assets/images/araven.webp"
 import myphoner from "../assets/images/myphoner.svg"
 ---
 
-<section id="banner" class="border-2 border-sort950 flex flex-row items-center overflow-hidden p-4 h-24">
-    <div class="flex gap-16 animate-scroll space-x-4">
-        <!-- Original set of images -->
-        <Image src={lidl} alt="Lidl logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={amc} alt="AMC logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={ricoh} alt="Ricoh logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={rema} alt="Rema logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={lastobject} alt="Last Object logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={hjemhavn} alt="Hjemhavn logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={ironpump} alt="Ironpump logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={araven} alt="Araven logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={friluft} alt="Friluftsland logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={blackcotton} alt="Black Cotton logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={myphoner} alt="Myphoner logo" class="w-20 max-w-[100px]" loading="lazy" />
 
-        <!-- Duplicate set of images -->
-        <Image src={lidl} alt="Lidl logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={amc} alt="AMC logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={ricoh} alt="Ricoh logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={rema} alt="Rema logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={lastobject} alt="Last Object logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={hjemhavn} alt="Hjemhavn logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={ironpump} alt="Ironpump logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={araven} alt="Araven logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={friluft} alt="Friluftsland logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={blackcotton} alt="Black Cotton logo" class="w-20 max-w-[100px]" loading="lazy" />
-        <Image src={myphoner} alt="Myphoner logo" class="w-20 max-w-[100px]" loading="lazy" />
+
+<div class="rullende_brands">
+    <div class="brands">
+        <a href="https://brandts.dk/" target="_blank"><img src="/banner/brandts_kunsthal.svg" alt="Kunst Museum Brandts' logo"></a>
+        <a href="https://stilling.dk/" target="_blank"><img src="/banner/stilling.svg" alt="Stilling's logo"></a>
+        <a href="https://copenhagenphotofestival.com/" target="_blank"><img src="/banner/cph.svg" alt="Copenhagen Photo Festival's logo"></a>
+        <a href="https://natmus.dk/museer-og-slotte/nationalmuseet/" target="_blank"><img src="/banner/n.svg" alt="Nationalmuseet's logo/"></a>
+        <a href="https://glyptoteket.dk/" target="_blank"><img src="/banner/glyptoteket.svg" alt="Glyptoteket's logo"></a>
     </div>
-</section>
+</div>
 
 <style>
-    @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); } /* Adjusted to account for duplication */
-    }
+.rullende_brands {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  opacity: 1;
+  padding: 20px 0; 
+   border-top: 5px dashed var(--blue);
+  border-bottom: 5px dashed var(--blue);
+}
 
-    .animate-scroll {
-        display: flex;
-        animation: scroll 20s linear infinite; /* Adjust duration to fit your needs */
-    }
+.brands {
+    display: flex;
+     align-items: center;
+     gap: 55px;
+     width: 200%;
+     height: auto;
+  animation: scroll 24s linear infinite;
+  left: -100%; /* Start fra højre side af containeren */
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+@media (min-width: 800px) {
+      /******* Rullende text ************/
+.rullende_brands {
+  border-top: 10px dashed var(--blue);
+  border-bottom: 10px dashed var(--blue);
+  background-color: var(--grey);
+}
+
+.brands {
+     gap: 150px;
+    width: 100%;
+    height: auto;
+}
+
+}
 </style>
-
