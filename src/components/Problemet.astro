@@ -27,7 +27,7 @@ import turtlebeach3 from "../assets/images/turtlebeach4.png";
     </div>
     </div>
     <div class="">
-        <Image src={turtlebeach2} alt="Skildpadde på strand med plastik" class="invisible absolute lg:relative z-10 lg:visible lg:max-h-screen" loading="lazy"/>
+        <Image src={turtlebeach2} alt="Skildpadde på strand med plastik" class="invisible absolute lg:relative z-10 lg:visible lg:max-h-screen fotoinview" loading="lazy"/>
         <Image src={turtlebeach3} alt="Skildpadde på strand med plastik" class="pt-12 lg:pt-0 lg:invisible z-[-10] lg:max-h-screen" loading="lazy"/>
     </div>
 </div>
@@ -46,5 +46,10 @@ import turtlebeach3 from "../assets/images/turtlebeach4.png";
 			delay: stagger(1, { start: 2 })
 		}
 		)
+	})
+
+    /* inView animation */
+	inView( ".fotoinview" , () =>{
+	animate( ".fotoinview", { x: [2000, 0 ] }, { duration: 3 })
 	})
 </script>
