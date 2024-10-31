@@ -1,13 +1,17 @@
 ---
 import Button from "./Button.astro"
 ---
-<section class="h-4/6" id="nyhedsbrev">
+<section class="h-4/6 overflow-hidden" id="nyhedsbrev">
     <div class="flex justify-center items-center">
-    <form action="#" method="post" class="absolute z-20" data-netlify="true">
+    <form action="#" method="post" class="absolute z-20 text-lg font-[campton-sb]" data-netlify="true">
         <label for="email">Email</label>
 
-        <div class="flex gap-2 cursor-pointer">
-        <input type="email" id="email" name="email" placeholder="Skriv din mail her" class="rounded-lg h-[60px] border-2 border-sort950 hover:border-pink caret-pink-500 "></input>
+        <div class="flex justify-center gap-2 cursor-pointer pt-2">
+          <span class="w-[1200px] absolute -z-10 cursor-default"><img src="/src/assets/images/tilmeld_dig.svg" alt="" class="absolute transform -translate-y-[160px] fotoinview" loading="lazy">
+       </span>
+          
+
+        <input type="email" id="email" name="email" placeholder="Skriv din email her" class="rounded-lg h-[60px] w-[600px] border-2 border-sort950 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 placeholder:sort700 hover:border-pink"></input>
         <Button variant="primary" size="large"> <input type="submit" value="Send" required></Button>
         </div>
     </form>
@@ -20,3 +24,13 @@ import Button from "./Button.astro"
     </div>
     </div>
 </section>
+
+<script>
+	/* Import af Motion One biblioteket */
+	import { animate, stagger, inView, scroll, timeline } from "motion";
+
+    /* inView animation */
+	inView( ".fotoinview" , () =>{
+	animate( ".fotoinview", { y: [1000, -150 ], opacity: [0, 1] }, { duration: 1.5 });
+	})
+</script>
