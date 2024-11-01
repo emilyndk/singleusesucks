@@ -2,12 +2,12 @@
 import { Image } from 'astro:assets';
 import logo from "../assets/images/logo_plasticchange.svg"
 ---
-<section class="bg-sort950 h-2/6" id="footer">
+<section class="bg-sort950 lg:h-2/6 h-screen" id="footer">
 <footer class="relative right-0 left-0 m-0 bg-sort950 font-[campton-sb] text-hvid py-8">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
             <!-- Column 1 -->
-            <div class="pl-12">
+            <div class="flex flex-col items-center justify-center lg:pl-12">
                 <!-- <h3 class="font-[campton-sb] text-lg mb-4"></h3> -->
                 <ul class="font-[campton-sb]">
                     <li class="pb-4"><a href="mailto:info@plasticchange.org" class="text-hvid hover:text-pink">Mail: info@plasticchange.org</a></li>
@@ -18,7 +18,7 @@ import logo from "../assets/images/logo_plasticchange.svg"
             </div>
 
             <!-- Column 2 -->
-            <div class="pl-16">
+            <div class="flex flex-col pl-24 lg:pl-16">
                 <h3 class="font-[campton-xb] text-lg mb-4">Bank oplysninger</h3>
                 <ul>
                     <li class="pb-4"><a class="text-hvid">CVR: 35778985</a></li>
@@ -36,7 +36,7 @@ import logo from "../assets/images/logo_plasticchange.svg"
             </div>
 
             <!-- Column 3 -->
-            <div>
+            <div class="flex flex-col items-center justify-center">
                 <h3 class="font-[campton-xb] text-lg mb-4">Hvad kan du gøre?</h3>
                 <ul>
                     <li class="pb-4"><a href="https://www.hjemhavn.dk/collections/plastic-change-merchandise" class="text-hvid hover:text-pink">Webshop</a></li>
@@ -48,7 +48,7 @@ import logo from "../assets/images/logo_plasticchange.svg"
             </div>
 
             <!-- Column 4 -->
-            <div>
+            <div class="flex flex-col items-center justify-center">
                 <h3 class="font-[campton-xb] text-lg mb-4">FAQ</h3>
                 <ul>
                      <li class="pb-4"><a href="https://plasticchange.dk/faq/" class="text-hvid hover:text-pink">Ofte stillede spørgsmål (FAQ)</a></li>

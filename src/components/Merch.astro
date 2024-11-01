@@ -9,20 +9,20 @@ import lazy from "../assets/images/lazy_way.png"
 ---
 
 <section class="h-screen" id="merch">
-    <div class="h-screen w-full absolute scrollzoom overflow-clip">
+    <div class="h-screen w-full absolute scrollzoom overflow-hidden">
         <Image src={merchbg} class="scrollzoomimg h-full w-full object-cover" alt="Undervands-billede" loading="lazy"/>
         <span class="absolute inset-0 bg-black/40"></span>
     </div>
 
- <div class="top-0 relative z-30">
-    <h2 class="uppercase relative top-16 pl-[45rem] font-[campton-xb] text-hvid text-7xl pb-8">merchandise</h2>
-    <h3 class="relative top-16 pl-[50rem] font-[tiempos] text-hvid text-3xl pb-4">Clean seas, clean style ₊ ⊹</h3>
-    <p class="relative top-16 pl-[53rem] font-[tiempos] text-hvid text-lg leading-normal">Vi donerer 5% af omsætningen til havet... året rundt! <br>
+ <div class="top-0 relative z-30 text-center px-4 md:text-left drop-shadow-xl">
+    <h2 class="uppercase relative top-16 md:pl-[15rem] lg:pl-[30rem] xl:pl-[45rem] font-[campton-xb] text-hvid text-5xl md:text-6xl lg:text-7xl pb-8">merchandise</h2>
+    <h3 class="relative top-16 md:pl-[17rem] lg:pl-[25rem] xl:pl-[50rem] font-[tiempos] text-hvid text-2xl md:text-3xl pb-4">Clean seas, clean style ₊ ⊹</h3>
+    <p class="relative top-16 md:pl-[20rem] lg:pl-[30rem] xl:pl-[53rem] font-[tiempos] text-hvid text-base md:text-lg leading-normal">Vi donerer 5% af omsætningen til havet... året rundt! <br>
         Plastic Change merchandise produceres og distribueres af <span class="font-[tiempos-italic] underline cursor-pointer hover:text-pink">Hjemhavn ApS</span>.</p>
         </div>
         
         
-        <div class="relative pt-10 top-16 pl-[1100px] font-[campton-xb] text-hvid text-lg leading-normal">
+        <div class="z-50 relative pt-10 lg:pt-16 top-16 pl-4 lg:pl-[1100px] font-[campton-xb] text-hvid text-lg leading-normal flex flex-col items-center">
     <Button variant="primary" size="large">
         <span class="inline-block align-middle pr-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 46 46" fill="none">
@@ -35,18 +35,20 @@ import lazy from "../assets/images/lazy_way.png"
     <!-- <img src="/src/assets/images/lazy_way.svg" alt="details" class="z-20 absolute"> -->
      <a href="https://www.hjemhavn.dk/collections/plastic-change-merchandise/products/emaljekrus-plastic-change-bla-kant" target="_blank" class="invisible"><Image src={kop}
         alt="Plastic Change's emaljekrus merchandise"
-        class="visible relative rotate-[-14deg] transform translate-x-[179%] translate-y-[55%] w-[400px] h-auto duration-500 hover:rotate-[14deg] hover:ease-in-out z-50" id='item2'></Image></a>
+        class="visible relative rotate-[-14deg] transform translate-x-[112%] sm:translate-x-[60%] md:translate-x-[100%] lg:translate-x-[179%] translate-y-[307%] lg:translate-y-[55%] w-[200px] sm:w-[300px] lg:w-[400px] h-auto duration-500 hover:rotate-[14deg] hover:ease-in-out z-50" id='item2'></Image></a>
 
     <a href="https://www.hjemhavn.dk/collections/plastic-change-merchandise/products/tee-plastic-change-men-unisex" target="_blank" class="invisible"><Image src={tee}
-        alt="T-shirt merchandise fra Plastic Change" class="visible absolute rotate-[4.4deg] transform translate-x-[-23%] translate-y-[-93%] w-[700px] h-auto duration-500 hover:rotate-[14deg] hover:ease-in-out z-50"
+        alt="T-shirt merchandise fra Plastic Change" class="visible absolute rotate-[4.4deg] transform translate-x-[-23%] translate-y-[-11%] sm:translate-y-[-180%] md:translate-y-[-120%] lg:translate-y-[-93%] w-[300px] sm:w-[500px] lg:w-[700px] h-auto duration-500 hover:rotate-[14deg] hover:ease-in-out z-50"
         id='item1'></Image></a>
 
         <div class="relative">
-    <Image src={dancingturtle} alt="Dansende skildpadde" class="overflow-hidden absolute bottom-[-5.5rem] right-10 wobble-hor-top w-80 h-auto z-10" loading="lazy"></Image>
+    <Image src={dancingturtle} alt="Dansende skildpadde"
+    class="overflow-hidden absolute bottom-[-6.5rem] lg:bottom-[-5.5rem] right-0 lg:right-10 sm:right-5 wobble-hor-top w-48 lg:w-80 h-auto z-10" loading="lazy"></Image>
     </div>
 
   <div class="relative">
-     <Image src={lazy} alt="Tekst info om tshirt og kop" class="overflow-hidden absolute bottom-[0rem] right-[49rem] w-80 h-auto z-10" loading="lazy"></Image>
+     <Image src={lazy} alt="Tekst info om tshirt og kop"
+     class="overflow-hidden absolute lg:rotate-[0deg] rotate-[32.4deg] bottom-[-19.5rem] lg:bottom-[0rem] right-[45px] lg:right-[49rem] w-[14rem] lg:w-80 h-auto z-10" loading="lazy"></Image>
  </div>
 
 </section>

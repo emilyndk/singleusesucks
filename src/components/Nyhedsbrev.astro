@@ -6,26 +6,37 @@ import turtle from "../assets/images/turtlenb.png"
 ---
 <section class="h-4/6" id="nyhedsbrev">
     <div class="flex justify-center items-center relative">
-      <Image src={seal} alt ="en sæl" class="absolute z-20 wobble-ver-right right-20 w-[25%] h-auto" loading="lazy"></Image>
+      <Image src={seal} alt ="en sæl"
+      class="absolute z-20 wobble-ver-right right-0 top-40 lg:right-20 w-[50%] lg:w-[25%] h-auto" loading="lazy"></Image>
 
-    <Image src={turtle} alt ="en skildpadde" class="absolute z-10 wobble-ver-right left-0 w-[20%] h-auto top-60" loading="lazy"></Image>
+    <Image src={turtle} alt ="en skildpadde"
+    class="absolute z-10 wobble-ver-right left-0 bottom-20 w-[45%] lg:w-[20%] h-auto lg:top-60" loading="lazy"></Image>
 
-    <form action="#" method="post" class="absolute z-20 text-lg font-[campton-sb]" data-netlify="true">
-        <label for="email">Email</label>
+    <form action="#" method="post"
+    class="absolute z-20 text-base lg:text-lg font-[campton-sb]" data-netlify="true">
+        <label for="email" class="mb-2">Email</label>
 
         <div class="flex justify-center gap-2 cursor-pointer pt-2 overflow-hidden">
-          <span class=" w-[1200px] absolute -z-10 cursor-default"><img src="/src/assets/images/tilmeld_dig.svg" alt="" class="absolute transform -translate-y-[160px] fotoinview will-change-transform"
+          <span class="w-full lg:w-[1200px] absolute -z-10 cursor-default"><img src="/src/assets/images/tilmeld_dig.svg" alt="Tilmeld dig tekst"
+            class="hidden lg:block absolute transform lg:-translate-y-[160px] fotoinview will-change-transform"
             loading="lazy">
-       </span>
-          
+          </span>
 
-        <input type="email" id="email" name="email" placeholder="Skriv din email her" class="rounded-lg h-[60px] w-[600px] border-2 border-sort950 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 placeholder:sort700 hover:border-pink"></input>
+          <img src="/src/assets/images/group.svg" alt="Tilmeld dig tekst"
+            class="block lg:hidden absolute fotoinview will-change-transform"
+            loading="lazy">
+          
+        <input type="email" id="email" name="email" placeholder="Skriv din email her" class="rounded-lg lg:h-[60px] lg:w-[600px] border-2 border-sort950 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 placeholder:sort700 hover:border-pink"></input>
         <Button variant="primary" size="large"> <input type="submit" value="Send" required></Button>
+
+        <img src="/src/assets/images/group1.svg" alt="Tilmeld dig tekst"
+            class="block lg:hidden absolute top-80 translate-y-5 fotoinview will-change-transform"
+            loading="lazy">
         </div>
     </form>
 
-     <div class="w-full h-[500px] overflow-clip -z-50">
-    <video class="rotate-180" autoplay muted loop>
+     <div class="lg:w-full h-screen lg:h-[500px] overflow-clip -z-50">
+    <video class="rotate-180  w-full h-full object-cover md:h-[700px] lg:h-[500px]" autoplay muted loop>
       <source src="/src/assets/images/nyhedsbrev_video.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
