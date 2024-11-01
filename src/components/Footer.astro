@@ -1,49 +1,61 @@
 ---
+import { Image } from 'astro:assets';
+import logo from "../assets/images/logo_plasticchange.svg"
 ---
 <section class="bg-sort950 h-2/6" id="footer">
-
-<footer class="relative right-0 left-0 m-0 bg-sort950 text-hvid py-8 text-center">
+<footer class="relative right-0 left-0 m-0 bg-sort950 font-[campton-sb] text-hvid py-8">
     <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-                <h3 class="font-[campton-sb] text-lg mb-4">Column 1</h3>
-                <ul>
-                    <li><a href="#" class="text-gray-400 hover:text-white">Link 1</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white">Link 2</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white">Link 3</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white">Link 4</a></li>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+            <!-- Column 1 -->
+            <div class="pl-12">
+                <!-- <h3 class="font-[campton-sb] text-lg mb-4"></h3> -->
+                <ul class="font-[campton-sb]">
+                    <li class="pb-4"><a href="mailto:info@plasticchange.org" class="text-hvid hover:text-pink">Mail: info@plasticchange.org</a></li>
+                    <li class="pb-4"><a href="tel:42667246" class="text-hvid hover:text-pink">Tlf: +45 42 66 72 46</a></li>
+                    <li class="pb-4"><a class="text-hvid">Telefontid: Mandag – Fredag, <br> 10:00 – 15:00</a></li>
+                    <li><a href="https://plasticchange.dk/kontakt-os/" class="text-hvid hover:text-pink">Kontakt os</a></li>
                 </ul>
             </div>
-            <div>
-                <h3 class="font-bold text-lg mb-4">Column 2</h3>
-                <ul>
-                    <li><a href="#" class="text-gray-400 hover:text-white">Link 1</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white">Link 2</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white">Link 3</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white">Link 4</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="font-bold text-lg mb-4">Column 3</h3>
-                <ul>
-                    <li><a href="#" class="text-gray-400 hover:text-white">Link 1</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white">Link 2</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white">Link 3</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white">Link 4</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="font-bold text-lg mb-4">Column 4</h3>
-                <ul>
-                    <li><a href="#" class="text-gray-400 hover:text-white">Link 1</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white">Link 2</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white">Link 3</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white">Link 4</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
 
+            <!-- Column 2 -->
+            <div class="pl-16">
+                <h3 class="font-[campton-xb] text-lg mb-4">Bank oplysninger</h3>
+                <ul>
+                    <li class="pb-4"><a class="text-hvid">CVR: 35778985</a></li>
+                    <li class="pb-4"><a class="text-hvid">Konto: 8411 0002039618</a></li>
+                     <li class="pb-4"><a class="text-hvid">MobilePay: 304961</a></li>
+                      <li class="pb-4"><a class="text-hvid">SWIFT: FAELDKK1</a></li>
+                       <li class="pb-4"><a class="text-hvid">IBAN: DK3584110002039618</a></li>
+                </ul>
+            </div>
+
+            <!-- Logo and Brand Column (Centered) -->
+            <div class="flex flex-col items-center">
+                <Image src={logo} alt="Plastic Change logo" class="hover:grayscale w-32 h-auto mb-4" loading="lazy"/>
+                <span class="text-lg font-[campton-xb]">© 2024 Plastic Change</span>
+            </div>
+
+            <!-- Column 3 -->
+            <div>
+                <h3 class="font-[campton-xb] text-lg mb-4">Hvad kan du gøre?</h3>
+                <ul>
+                    <li class="pb-4"><a href="https://www.hjemhavn.dk/collections/plastic-change-merchandise" class="text-hvid hover:text-pink">Webshop</a></li>
+                    <li class="pb-4"><a href="https://www.hjemhavn.dk/collections/plastic-change-merchandise" class="text-hvid hover:text-pink">Giv et bidrag</a></li>
+                    <li class="pb-4"><a href="https://plasticchange.dk/bliv-medlem/" class="text-hvid hover:text-pink">Bliv medlem</a></li>
+                    <li class="pb-4"><a href="https://plasticchange.dk/testamente/" class="text-hvid hover:text-pink">Lav et testamente</a></li>
+                    <li class="pb-4"><a href="https://plasticchange.dk/testamente/" class="text-hvid hover:text-pink">Støt som virksomhed</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div>
+                <h3 class="font-[campton-xb] text-lg mb-4">FAQ</h3>
+                <ul>
+                     <li class="pb-4"><a href="https://plasticchange.dk/faq/" class="text-hvid hover:text-pink">Ofte stillede spørgsmål (FAQ)</a></li>
+                      <li class="pb-4"><a href="https://plasticchange.dk/gode-raad" class="text-hvid hover:text-pink">Gode råd</a></li>
+                       <li class="pb-4"><a href="https://plasticchange.dk/privatlivspolitik/" class="text-hvid hover:text-pink">Privatlivspolitik</a></li>
+                        <li class="pb-4"><a href="https://plasticchange.dk/betalingspolitik/" class="text-hvid hover:text-pink">Betalingspolitik</a></li>
+                        </ul>
+                         </div>
 </section>
   
